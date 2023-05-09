@@ -34,11 +34,11 @@ public class CalculateArea {
         Scanner keyboard = new Scanner(System.in);
 
         // Display the menu.
-        System.out.println("Geometry Calculator\n");
+        System.out.println("Geometry calculator: \n");
         System.out.println("1. Calculate the Area of a Circle");
         System.out.println("2. Calculate the Area of a Rectangle");
         System.out.println("3. Calculate the Area of a Triangle");
-        System.out.println("4. Quit\n");
+        System.out.println("4. Quit");
         System.out.print("Enter your choice (1-4) : ");
 
         // get input from user
@@ -60,8 +60,12 @@ public class CalculateArea {
         // Get input from user
         Scanner keyboard = new Scanner(System.in);
         System.out.print("What is the circle's radius? ");
-        //todo
-        //radius = keyboard.nextDouble();
+        radius = keyboard.nextBigDecimal();
+
+        if (radius.toString().contains("-")) {
+            System.out.println("Value can not be negative");
+            return;
+        }
 
         // Display output
         System.out.println("The circle's area is "
@@ -77,13 +81,16 @@ public class CalculateArea {
 
         // Get length
         System.out.print("Enter length? ");
-        //todo
-        //length = keyboard.nextDouble();
+        length = keyboard.nextBigDecimal();
 
         // Get width
         System.out.print("Enter width? ");
-        //todo
-        //width = keyboard.nextDouble();
+        width = keyboard.nextBigDecimal();
+
+        if (length.toString().contains("-") || width.toString().contains("-")) {
+            System.out.println("Value can not be negative");
+            return;
+        }
 
         // Display output
         System.out.println("The rectangle's area is "
@@ -99,13 +106,16 @@ public class CalculateArea {
 
         // Get the base
         System.out.print("Enter length of the triangle's base? ");
-        //todo
-        //base = keyboard.nextDouble();
+        base = keyboard.nextBigDecimal();
 
         // Get the height
         System.out.print("Enter triangle's height? ");
-        //todo
-        //height = keyboard.nextDouble();
+        height = keyboard.nextBigDecimal();
+
+        if (base.toString().contains("-") || height.toString().contains("-")) {
+            System.out.println("Value can not be negative");
+            return;
+        }
 
         // Display the triangle's area.
         System.out.println("The triangle's area is "
