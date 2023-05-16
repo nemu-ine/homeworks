@@ -1,8 +1,9 @@
 package io.codelex.arrays.practice;
 
+import java.util.Arrays;
+
 public class Exercise1 {
 
-    //TODO: Write a Java program to sort a numeric array and a string array.
     public static void main(String[] args) {
 
         int[] myArray1 = {
@@ -20,15 +21,24 @@ public class Exercise1 {
                 "C++"
         };
 
-        /*
-        fixme
-        System.out.println("Original numeric array : " + .........);
-        ........... //Sort array
-        System.out.println("Sorted numeric array : " + .........);
 
-        System.out.println("Original string array : " + .........);
-        ......... //Sort array
-        System.out.println("Sorted string array : " + .........);
-        */
+        System.out.println("Original numeric array : " + Arrays.toString(myArray1));
+        int[] newNumArray = sortArray(myArray1);
+        System.out.println("Sorted numeric array : " + Arrays.toString(newNumArray));
+
+        System.out.println("Original string array : " + Arrays.toString(myArray2));
+        String[] newStringArray = sortArray(myArray2);
+        System.out.println("Sorted string array : " + Arrays.toString(newStringArray));
+
+    }
+
+    public static int[] sortArray (int[] arr) {
+        Arrays.sort(arr);
+        return arr;
+    }
+
+    public static String[] sortArray (String[] arr) {
+        Arrays.sort(arr);
+        return arr;
     }
 }
