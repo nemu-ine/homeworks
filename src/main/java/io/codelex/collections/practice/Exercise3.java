@@ -12,18 +12,18 @@ public class Exercise3 {
         mySet.add("Red");
         mySet.add("Black");
         mySet.add("Yellow");
-        //..
+        mySet.add("Orange");
+        mySet.add("White");
 
         System.out.println("Should have 5 elements: " + mySet); //Pay attention on order!
 
         //TODO: iterate through all elements in set
-        /*
-        for (...) {
-            System.out.println(element);
+        for (String str : mySet) {
+            System.out.println(str);
         }
-        */
 
         //TODO: remove all values from set
+        mySet.clear();
         System.out.println("Should be empty: " + mySet);
 
         //TODO: check if it is possible to add duplicated values
