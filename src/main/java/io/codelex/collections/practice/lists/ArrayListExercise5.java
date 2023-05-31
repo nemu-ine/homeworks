@@ -16,6 +16,7 @@ public class ArrayListExercise5 {
 
         System.out.println(colors);
 
+        colors.set(2, "Yellow");
         //TODO: Change the third element with "Yellow"
 
         System.out.println(colors);
