@@ -8,7 +8,7 @@ public class DebitCard extends Card {
 
     @Override
     public void printWarning() {
-        if (balance < 100) {
+        if (balance > 10000) {
             System.out.println("Warning: Too much money");
         }
     }
