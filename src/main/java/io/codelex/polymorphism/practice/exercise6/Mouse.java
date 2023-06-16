@@ -1,0 +1,36 @@
+package io.codelex.polymorphism.practice.exercise6;
+
+import java.text.DecimalFormat;
+
+public class Mouse extends Mammal {
+
+    public Mouse(String name, String type, double weight, String livingRegion) {
+        super(name, type, weight, livingRegion);
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println("squeak");
+    }
+
+    @Override
+    public void eat(Food food) {
+        if (food instanceof Vegetable) {
+            foodEaten += food.getQuantity();
+        } else {
+            System.out.println("Mice are not eating that type of food!");
+        }
+    }
+
+    @Override
+    public String toString() {
+        DecimalFormat df = new DecimalFormat("#.##");
+        return getClass().getSimpleName() + "["
+                + animalName + ", "
+                + df.format(animalWeight) + ", "
+                + livingRegion + ", "
+                + foodEaten
+                + "]";
+    }
+
+}
