@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class Main {
 
@@ -19,9 +20,9 @@ public class Main {
         System.out.println(df.format(evenPercent) + "%");
     }
 
-    public static <T> double partOf(List<T> list, Function<T, Boolean> condition) {
+    public static <T> double partOf(List<T> list, Predicate<T> condition) {
         long count = list.stream()
-                .filter(condition::apply)
+                .filter(condition)
                 .count();
         return (double) count / list.size() * 100;
     }

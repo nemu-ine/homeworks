@@ -16,7 +16,6 @@ public abstract class Card {
 
     public void depositBalance(double amount) {
         balance += amount;
-        printWarning();
     }
 
     public void withdrawBalance(double amount) throws NotEnoughFundsException {
@@ -24,7 +23,6 @@ public abstract class Card {
             throw new NotEnoughFundsException();
         }
         balance -= amount;
-        printWarning();
     }
 
     public abstract void printWarning();

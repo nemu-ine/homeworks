@@ -7,6 +7,15 @@ public class CreditCard extends Card {
     }
 
     @Override
+    public void withdrawBalance(double amount) throws NotEnoughFundsException {
+        if (amount > balance) {
+            throw new NotEnoughFundsException();
+        }
+        balance -= amount;
+        printWarning();
+    }
+
+    @Override
     public void printWarning() {
         if (balance < 100) {
             System.out.println("Warning: Low funds");
